@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "7107091d-9f70-46cf-b239-6d5a360e7254",
+		"name": "KafkaExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Listeners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/kafka/listeners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kafka",
+						"listeners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start / Stop Listener",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"containerId\": \"NonPrioritisedListener-dlt\",\n    \"operation\": \"STOP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kafka/listeners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kafka",
+						"listeners"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
