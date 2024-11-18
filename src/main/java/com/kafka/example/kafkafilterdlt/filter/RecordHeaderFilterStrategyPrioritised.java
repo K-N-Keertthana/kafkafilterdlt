@@ -21,7 +21,7 @@ public class RecordHeaderFilterStrategyPrioritised<K,V> implements RecordFilterS
         if(prioritisedEventTypes.contains(eventType)){
             return false;
         }
-        log.info("Message skipped on non prioritised filter. EventType: {}, topic {}, offset {}", eventType, consumerRecord.topic(), consumerRecord.offset());
+        log.info("Message skipped on prioritised filter. EventType: {}, topic {}, offset {}", eventType, consumerRecord.topic(), consumerRecord.offset());
         return true;
     }
 
